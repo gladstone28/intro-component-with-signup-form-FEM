@@ -1,0 +1,177 @@
+/* Variables */
+/* Primary */
+$Red: hsl(0, 100%, 74%); 
+$Green: hsl(154, 59%, 51%);
+
+/*Accent*/
+$Blue: hsl(248, 32%, 49%);
+
+/*Neutral*/
+$Dark-Blue: hsl(249, 10%, 26%); 
+$Grayish-Blue: hsl(246, 25%, 77%);
+
+
+/* Reset CSS */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    overflow-wrap: break-word;
+}
+
+img, picture, svg{
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+body{
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* General Styling */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../images/bg-intro-desktop.png');
+    background-position: center center;
+    background-size: cover;
+    background-color: $Red;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.code{
+    width: 100%;
+    color: white;
+    padding: 2.8rem;
+
+    display: grid;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media(min-width:900px){
+    .code{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.text{
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+    max-width: 550px;
+
+    h1{
+        font-size: 2rem;
+    }
+}
+
+@media(min-width:900px){
+    .text{
+        text-align: left;
+
+        h1{
+            font-size: 3rem;
+        }
+    }
+}
+
+.form{
+
+    display: grid;
+    gap: 1rem;
+
+    .TryBtn{
+        padding: 0.8rem;
+        border: none;
+        outline: none;
+        border-radius: 0.5rem;
+        background-color: $Blue;
+        color: white;
+        max-width: 600px;
+
+        .bold{
+            font-weight: bold;
+        }
+
+    }
+
+    .My-Form{
+        background-color: white;
+        color: black;
+        border: none;
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        display: grid;
+        gap: 1rem;
+
+        width: 100%;
+        max-width: 600px;
+
+        input{
+            padding: 0.6rem;
+            width: 100%;
+            color: $Dark-Blue;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            border: 1px solid $Grayish-Blue;
+        }
+
+        .error{
+            color: $Red;
+            font-weight: 800;
+            font-style: italic;
+            display: none;
+        }
+
+        .error.active{
+            display: block !important;
+        }
+
+        .SubmitBtn{
+            background-color: $Green;
+            border: none;
+            cursor: pointer;
+            color: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            transition: background 1s;
+        }
+
+        .SubmitBtn:hover{
+            background-color: $Blue;
+        }
+
+        p{
+            font-size: 0.7rem;
+            text-align: center;
+
+            .terms{
+                color: $Red;
+                line-height: 1.5;
+            }
+        }
+
+    }
+}
+
+footer{
+    margin-inline: auto;
+    width: fit-content;
+}

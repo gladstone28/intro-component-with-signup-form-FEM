@@ -1,42 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" defer></script>
+
+    <script src="script.js" defer></script>
+
 </head>
+
 <body>
 
-  Learn to code by watching others
+    <main>
+        <article class="code">
+            <div class="text">
+                <h1>Learn to code by watching others</h1>
+                <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+            </div>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+            <div class="form">
+                <button class="TryBtn"> <span class="bold">Try it free 7 days</span> <br> then $20/mo. thereafter</button>
+                <form method="get" class="My-Form">
+                    <div>
+                        <input type="text" placeholder=" First Name " id="f-name">
+                        <p class="error f-name__error">First Name cannot be empty</p>
+                    </div>
 
-  Try it free 7 days then $20/mo. thereafter
+                    <div>
+                        <input type="text" placeholder=" Last Name " id="l-name">
+                        <p class="error l-name__error">Last Name cannot be empty</p>
+                    </div>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+                    <div>
+                        <input type="email" placeholder=" Email Address " id="email">
+                        <p class="error email__error">Looks like this is not an email</p>
+                    </div>
 
-  Claim your free trial 
+                    <div>
+                        <input type="password" placeholder=" Password " id="password">
+                        <p class="error password__error">Password cannot be empty</p>
+                    </div>
+                    <button class="SubmitBtn" type="submit" onclick="validateForm()">Claim your free trial</button>
+                    <p>By clicking the button, you are agreeing to our <span class="terms">Terms and Services</span></p>
+                </form>
+            </div>
+        </article>
+    </main>
 
-  By clicking the button, you are agreeing to our Terms and Services
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/Ratified">Gladstone Rose</a>.
+        </p>
+    </footer>
+
 </body>
+
 </html>

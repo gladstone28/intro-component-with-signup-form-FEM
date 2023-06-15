@@ -1,0 +1,149 @@
+/* Variables */
+/* Primary */
+/*Accent*/
+/*Neutral*/
+/* Reset CSS */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+img, picture, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("../images/bg-intro-desktop.png");
+  background-position: center center;
+  background-size: cover;
+  background-color: hsl(0, 100%, 74%);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.code {
+  width: 100%;
+  color: white;
+  padding: 2.8rem;
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .code {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.text {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+  max-width: 550px;
+}
+.text h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 900px) {
+  .text {
+    text-align: left;
+  }
+  .text h1 {
+    font-size: 3rem;
+  }
+}
+.form {
+  display: grid;
+  gap: 1rem;
+}
+.form .TryBtn {
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: hsl(248, 32%, 49%);
+  color: white;
+  max-width: 600px;
+}
+.form .TryBtn .bold {
+  font-weight: bold;
+}
+.form .My-Form {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+.form .My-Form input {
+  padding: 0.6rem;
+  width: 100%;
+  color: hsl(249, 10%, 26%);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(246, 25%, 77%);
+}
+.form .My-Form .error {
+  color: hsl(0, 100%, 74%);
+  font-weight: 800;
+  font-style: italic;
+  display: none;
+}
+.form .My-Form .error.active {
+  display: block !important;
+}
+.form .My-Form .SubmitBtn {
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: background 1s;
+}
+.form .My-Form .SubmitBtn:hover {
+  background-color: hsl(248, 32%, 49%);
+}
+.form .My-Form p {
+  font-size: 0.7rem;
+  text-align: center;
+}
+.form .My-Form p .terms {
+  color: hsl(0, 100%, 74%);
+  line-height: 1.5;
+}
+
+footer {
+  margin-inline: auto;
+  width: fit-content;
+}
+
+/*# sourceMappingURL=styles.css.map */
