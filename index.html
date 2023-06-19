@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -19,54 +18,100 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" defer></script>
 
     <script src="script.js" defer></script>
+    
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("f-name").value;
+            var lastName = document.getElementById("l-name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var firstNameError = document.querySelector(".f-name__error");
+            var lastNameError = document.querySelector(".l-name__error");
+            var emailError = document.querySelector(".email__error");
+            var passwordError = document.querySelector(".password__error");
+            var isValid = true;
 
+            if (firstName.trim() === "") {
+                firstNameError.style.display = "block";
+                isValid = false;
+            } else {
+                firstNameError.style.display = "none";
+            }
+
+            if (lastName.trim() === "") {
+                lastNameError.style.display = "block";
+                isValid = false;
+            } else {
+                lastNameError.style.display = "none";
+            }
+
+            if (email.trim() === "" || !isValidEmail(email)) {
+                emailError.style.display = "block";
+                isValid = false;
+            } else {
+                emailError.style.display = "none";
+            }
+
+            if (password.trim() === "") {
+                passwordError.style.display = "block";
+                isValid = false;
+            } else {
+                passwordError.style.display = "none";
+            }
+
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            // Basic email validation
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            return emailRegex.test(email);
+        }
+    </script>
 </head>
 
 <body>
-
     <main>
         <article class="code">
             <div class="text">
                 <h1>Learn to code by watching others</h1>
-                <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+                <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
             </div>
 
             <div class="form">
-                <button class="TryBtn"> <span class="bold">Try it free 7 days</span> <br> then $20/mo. thereafter</button>
-                <form method="get" class="My-Form">
+                <button class="TryBtn"><span class="bold">Try it free 7 days</span><br> then $20/mo. thereafter</button>
+                <form method="get" class="My-Form" onsubmit="return validateForm()">
                     <div>
-                        <input type="text" placeholder=" First Name " id="f-name">
+                        <input type="text" placeholder="First Name" id="f-name">
                         <p class="error f-name__error">First Name cannot be empty</p>
                     </div>
 
                     <div>
-                        <input type="text" placeholder=" Last Name " id="l-name">
+                        <input type="text" placeholder="Last Name" id="l-name">
                         <p class="error l-name__error">Last Name cannot be empty</p>
                     </div>
 
                     <div>
-                        <input type="email" placeholder=" Email Address " id="email">
+                        <input type="email" placeholder="Email Address" id="email">
                         <p class="error email__error">Looks like this is not an email</p>
                     </div>
 
                     <div>
-                        <input type="password" placeholder=" Password " id="password">
+                        <input type="password" placeholder="Password" id="password">
                         <p class="error password__error">Password cannot be empty</p>
                     </div>
-                    <button class="SubmitBtn" type="submit" onclick="validateForm()">Claim your free trial</button>
+                    <button class="SubmitBtn" type="submit">Claim your free trial</button>
                     <p>By clicking the button, you are agreeing to our <span class="terms">Terms and Services</span></p>
                 </form>
             </div>
         </article>
     </main>
 
-
     <footer>
         <p class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/Ratified">Gladstone Rose</a>.
         </p>
     </footer>
-
 </body>
 
-</html>
+
