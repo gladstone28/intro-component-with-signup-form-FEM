@@ -143,7 +143,6 @@ body {
 
 footer {
   margin-inline: auto;
+  width: -moz-fit-content;
   width: fit-content;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
