@@ -16,7 +16,6 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -48,10 +47,10 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- SCSS
 - Mobile-first workflow
 - [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -83,13 +82,13 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Example resource 1](https://codepen.io/gladstone2/pen/yLQONKd/5be5092948146ced2723ec987e5b14d0) - This helped me for codepen. I really liked this links to resources that I can use going forward.
+- [Example resource 2](https://www.codecademy.com/courses/intro-to-ui-ux/lessons/ui-and-ux-prototyping-with-figma/exercises/layers-panel) - This is an amazing article which helped me finally understand the Figma Layers Pane. I'd recommend it to anyone still learning this concept.
 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [Add your name here](https://www.gladstonerose.tech)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/gladstone28)
 - Twitter - [@yourusername](https://www.twitter.com/gladdyus)
 
